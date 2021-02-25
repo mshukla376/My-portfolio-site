@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block title %}Tic Tac Toe{% endblock title %}Tic Tac Toe
+{% block body %}
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="text-center">
+                <img src="{% static 'image/tic.jpg' %}" width="1400px" height="500px" alt="...">
+                <div class="carousel-c">
+                    <h1 style="font-family:verdana; font-weight: bold;">Tic Tac Toe Game</h1>
+                    <p>Its a Tic Tac Toe 2 player game developed by using Python and Tkinter GUI</p>
+                </div> 
+                <div class="text-center custom-c">
+                    <a href="https://github.com/mshukla376/tic-tac-toe-GUI-tkinter" class="box text-center">Source Code</a>
+                </div>
+                <div class="text-center custom-c">
+                    <a href="{% static 'Tic-Tac-Toe.exe' %}" class="box text-center">EXE File Download</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+{% endblock body %}

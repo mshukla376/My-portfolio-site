@@ -1,0 +1,49 @@
+{% extends 'navbar.html' %}
+{% block title%}MOHIT SHUKLA{% endblock title%}
+
+{% block body %}
+{% load static %}
+
+       <br>
+       <div style="background-image: url(static/image/me-02.jpeg);">
+        <div class="container">
+            <div class="row">
+                <div class="background col-md-3">
+                    <div class="transbox card card-body h-80" id="profile-wrapper">
+                        <img id="profile-pic" src="{% static 'image/me.jpg' %}" >
+                        <hr>
+                        <h4>Hi I'm Mohit Shukla!</h4>
+                        <p>I love coding, doing research and collaborating</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Auto width -->
+        <div class="text-center pb-4">
+            <a href= "{% static 'resume.pdf' %}" class="">
+                <i class="fa fa-file-text" style="padding: 0px;"></i>
+                <p>My Resume</p>
+            </a>
+        </div>
+        <style>
+            div.background {
+            background: url(klematis.jpg) repeat;
+            }
+
+            div.transbox {
+            margin: 30px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+            }
+
+            div.transbox p {
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
+            }
+        </style>
+
+{% endblock body %}

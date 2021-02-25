@@ -1,0 +1,131 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block title %}signup{% endblock title %}
+{% block body %}
+
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Sign Up</h2>
+                </div>
+                <div class="card-body">
+                    <form action="{% url "Signup" %}" method="post" >
+                    {% csrf_token %}
+                        {% for message in messages%}
+                            <p style="color:red;">{{message}}</p>
+                        {% endfor %}
+
+                         <div class="form-row">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="uname" name="username">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="form-row">
+                            <div class="name">Enter Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5 password1" type="password" name="password1">
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="form-row">
+                            <div class="name">Confirm Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5 password2" type="password" name="password2">
+                                    <span class="vpass-span"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      
+                        <div>
+                            <button class="btn btn-primary" type="submit">Register</button>
+                            <a href="{% url "loginUser" %}">Have an Account Login Here</a><br><br>
+                            <a href="{% url "reset_password" %}">Forgot password?</a>
+
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}"></script>
+{% endblock body %}
+
+{% block post_scripts %}
+<script>
+    window.passFlag = false;
+    $('.password1').keyup(function(){
+        var npass = $(this).val();
+        if(npass != '')
+        {
+            $('.password2').attr('disabled', false);
+        }
+        else
+        {
+            $('.password2').attr('disabled', true);
+        }
+    })
+
+    $('.password2').keyup(function(){
+        var vpass = $(this).val();
+        var npass = $('.password1').val();
+
+        
+        if(npass.length != '' && vpass.length > 0)
+        {
+            if(npass == vpass)
+            {
+                $('.vpass-span').removeClass('text-danger')
+                $('.vpass-span').addClass('text-success')
+                $(this).removeClass('is-invalid')
+                $(this).addClass('is-valid')
+                $('.vpass-span').html('Password matched')
+                window.passFlag = true;
+            }
+            else
+            {
+                $('.vpass-span').removeClass('text-success')
+                $('.vpass-span').addClass('text-danger')
+                $(this).removeClass('is-valid')
+                $(this).addClass('is-invalid')
+                $('.vpass-span').html('Password does not match')
+            }
+        }
+        else
+        {
+            $('.vpass-span').html('')
+            $(this).removeClass('is-valid')
+            $(this).addClass('is-invalid')
+        }
+    })
+</script>
+{% endblock post_scripts %}
+
+<!-- end document-->

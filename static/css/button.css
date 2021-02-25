@@ -1,0 +1,16 @@
+.btn {
+    /* background-color: black; */
+    border: none;
+    color: white;
+    padding: 1px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color:none;
+  }
+  
+  
