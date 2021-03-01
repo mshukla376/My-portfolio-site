@@ -10,6 +10,7 @@ urlpatterns = [
     path('resume', views.Resume, name="resume"),
     path('game', views.Project1, name="game"),
     path('django-site', views.Project2, name="site"),
+    path('AI-Assistant', views.Project3, name="ai_assistant"),
     path('signup', views.Signup, name="Signup"),
     path('login', views.loginUser, name="loginUser"),
     path('soon', views.build, name="build"),

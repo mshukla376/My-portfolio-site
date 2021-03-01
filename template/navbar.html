@@ -33,7 +33,9 @@
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
 
     <!-- load CSS -->
-   
+
+    <!--resume css-->
+    {% block css %}{% endblock css %}
 
     <style>
       .carousel-c {
@@ -81,6 +83,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'game' %}">Project 1</a></li>
                 <li><a class="dropdown-item" href="{% url 'site' %}">Project 2</a></li>
+                <li><a class="dropdown-item" href="{% url 'ai_assistant' %}">Project 3</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -88,8 +91,9 @@
             </li>
           </ul>
           <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'loginUser' %}">Login</a>
+          <a type="button" class="btn btn-primary" style="color:black;" href="{% url 'Signup' %}">Sign Up</a>
         </div>
-        <a type="button" class="btn btn-primary" style="color:black;" href="{% url 'Signup' %}">Sign Up</a>
+        
       </div>
 </nav>
 
@@ -102,22 +106,22 @@
     <section class="mb-4">
     <h1 style="color:blue;">Connect With Me</h1>
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/mohit.shukla.75685" role="button"
         ><i class="fa fa-facebook"></i
       ></a>
 
       <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/Mshukla_02" role="button"
         ><i class="fa fa-twitter"></i
       ></a>
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://myaccount.google.com/profile?pli=1" role="button"
         ><i class="fa fa-google"></i
       ></a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/mshukla.k10/" role="button"
         ><i class="fa fa-instagram"></i
       ></a>
 
@@ -127,7 +131,7 @@
       ></a>
 
       <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/mshukla376" role="button"
         ><i class="fa fa-github"></i
       ></a>
     </section>
