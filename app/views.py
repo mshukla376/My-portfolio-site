@@ -20,6 +20,9 @@ def Project1(request):
 def Project2(request):
     return render(request,"project2.html")
 
+def Project3(request):
+    return render(request,"AI_assistant.html")
+
 def Signup(request):
     if request.method=='POST':
         username = request.POST['username']

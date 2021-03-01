@@ -1,0 +1,44 @@
+{% extends 'navbar.html' %}
+{% block title %}AI-Assistant{% endblock title %}
+{% load static %}
+{% block body %}
+<style>
+.containe .btn {
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:rgb(0,0,139);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.containe .btn:hover {
+  background-color: black;
+}
+</style>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="containe text-center">
+                <div class="containe" style="border:5px; border-style:solid; border-color:black; background-color: black!important; padding: 0em;">
+                    <h1 style="font-family:verdana; font-weight: bold; background-color: black!important; color:white; border:3px; border-style:solid; border-color:black; padding: 0em;">AI Assistant</h1>
+                    <p style="color:white;"><strong>Its a Python Program which operates on voice command and do what we say,Performes operations that we want</strong></p>
+                </div> 
+                <img src="{% static 'image/new-ai.jpg' %}" width="1350" height="600" alt="...">
+                
+                <div class="containe">
+                    <a href="https://github.com/mshukla376/AI-Assistant" class="btn btn-primary">Source Code</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+{% endblock body %}
