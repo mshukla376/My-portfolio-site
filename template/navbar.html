@@ -90,8 +90,14 @@
               <a class="nav-link active" href="{% url 'Feedback' %}">Contact Us</a>
             </li>
           </ul>
-          <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'loginUser' %}">Login</a>
-          <a type="button" class="btn btn-primary" style="color:black;" href="{% url 'Signup' %}">Sign Up</a>
+            
+          {% if user.is_authenticated %}
+             <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'logoutUser' %}">Logout</a>
+          {% else %}
+            <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'loginUser' %}">Login</a>
+            <a type="button" class="btn btn-primary" style="color:black;" href="{% url 'Signup' %}">Sign Up</a>
+           
+          {% endif %}
         </div>
         
       </div>

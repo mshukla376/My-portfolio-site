@@ -69,7 +69,7 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('/login')
+    return redirect('index')
 
 
 def Feedback(request):

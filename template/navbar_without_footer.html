@@ -102,8 +102,12 @@
               <a class="nav-link active" href="{% url 'Feedback' %}">Contact Us</a>
             </li>
           </ul>
-          <a type="button" class="mr-2 btn btn-primary" style="color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'loginUser' %}">Login</a>
-          <a type="button" class="btn btn-primary" style="color:black; color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'Signup' %}">Sign Up</a>
+          {% if user.is_authenticated %}
+            <a type="button" class="mr-2 btn btn-primary" style="color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'logoutUser' %}">Logout</a>
+          {% else %}
+            <a type="button" class="mr-2 btn btn-primary" style="color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'loginUser' %}">Login</a>
+            <a type="button" class="btn btn-primary" style="color:black; color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'Signup' %}">Sign Up</a>
+          {% endif %}
         </div>
       </div>
 </nav>
