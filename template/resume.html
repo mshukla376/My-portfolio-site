@@ -108,7 +108,7 @@
                                 <img class="img-fluid project-image rounded shadow-sm" src="{% static 'image/AI.jpg' %}" alt="project name" />
                                 </a>
                                 <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank">AI-Assistant</a></h3>
+                                    <h3 class="title"><a href="{% url 'ai_assistant' %}" target="_blank">AI-Assistant</a></h3>
                                     <p class="mb-2">Its a AI Assistant using Python and its modules</p>
                                     <p><a class="more-link" href="{% url 'ai_assistant' %}" target="_blank"><i class="fas fa-external-link-alt"></i>more</a></p>
                                 </div><!--//desc-->                          
@@ -121,7 +121,7 @@
                                 <div class="desc col-md-8 col-12">
                                     <h3 class="title"><a href="{% url 'site' %}" target="_blank">User Signup Login Form </a></h3>
                                     <p class="mb-2">Its a simple User Signup Login form using Python/Django</p>
-                                    <p><a class="more-link" href="" target="_blank"><i class="fas fa-external-link-alt"></i>more</a></p>
+                                    <p><a class="more-link" href="{% url 'site' %}" target="_blank"><i class="fas fa-external-link-alt"></i>more</a></p>
                                 </div><!--//desc-->                          
                             </div><!--//item-->
                             
