@@ -158,7 +158,7 @@
     justify-content: space-between;
     border-radius: 50%;
     overflow: hidden;
-    animation: spin 10s;
+    animation: spin 10s infinite;
 }
 .effect-5 div{
     width: 1px;
