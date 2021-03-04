@@ -33,10 +33,10 @@
     }
 }
 @media(max-width: 574px){
-    .home-section .home-img .home-box{
+    .home-section .home-img .img-box{
         max-width: 260px;
     }
-    .home-section .home-text{
+    .home-section .home-text h2{
         font-size: 40px;
 
     }
