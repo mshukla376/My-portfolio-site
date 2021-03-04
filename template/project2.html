@@ -21,16 +21,27 @@
 .containe .btn:hover {
   background-color: black;
 }
+
+@media screen and (max-width:767px){
+  .con .btn{
+    text-align: center !important;
+    top: 30%;
+    left: 50%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
 </style>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="text-center">
+            <div class="img text-center">
                 <div class="containe" style="border:5px; border-style:solid; border-color:black; background-color: black!important; padding: 0em;">
                     <h1 style="font-family:verdana; font-weight: bold; color:white;">Django Signup Login Form</h1>
                     <p style="color:white;"><strong>Its a basic SignUp Login user form developed by using Python/Django</strong></p>
                 </div>
                 <img src="{% static 'image/sglg.jpg' %}" width="1500px" height="500px" alt="..."> 
-                <div class="containe">
+                <div class="con containe">
                     <a href="https://github.com/mshukla376/signup-login-authentication-website-using-django" class="btn btn-primary">Source Code</a>
                 </div>
             </div>

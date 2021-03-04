@@ -21,18 +21,29 @@
 .containe .btn:hover {
   background-color: black;
 }
+
+@media screen and (max-width:767px){
+  .con .btn{
+    text-align: center !important;
+    top: 30%;
+    left: 50%;
+    }
+    img {
+        width: 100%;
+    }
+}
 </style>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="containe text-center">
+            <div class="img containe text-center">
                 <div class="containe" style="border:5px; border-style:solid; border-color:black; background-color: black!important; padding: 0em;">
                     <h1 style="font-family:verdana; font-weight: bold; background-color: black!important; color:white; border:3px; border-style:solid; border-color:black; padding: 0em;">AI Assistant</h1>
                     <p style="color:white;"><strong>Its a Python Program which operates on voice command and do what we say,Performes operations that we want</strong></p>
                 </div> 
                 <img src="{% static 'image/new-ai.jpg' %}" width="1350" height="600" alt="...">
                 
-                <div class="containe">
+                <div class="con containe">
                     <a href="https://github.com/mshukla376/AI-Assistant" class="btn btn-primary">Source Code</a>
                 </div>
             </div>

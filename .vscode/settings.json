@@ -1,0 +1,8 @@
+{
+    "emmet.extensionsPath": "",
+    "django.snippets.exclude": [
+    
+        "cms",
+        "wagtail"
+    ],
+}

@@ -17,25 +17,54 @@
   border-radius: 5px;
   text-align: center;
 }
+.contai .btn {
+  position: absolute;
+  top: 33%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:rgb(0,0,139);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
 
 .containe .btn:hover {
   background-color: black;
+}
+@media screen and (max-width:767px){
+  .con .btn{
+    text-align: center !important;
+    top: 30%;
+    left: 50%;
+    }
+    .conta .btn{
+        text-align: center !important;
+        top: 38%;
+        left: 50%;
+    }
+    img {
+        max-width: 100%;
+    }
 }
 </style>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="text-center">
+            <div class="img text-center">
                 <div class="containe text-center" style="border:5px; border-style:solid; border-color:black; background-color: black!important; padding: 0em;">
                     <h1 style="font-family:verdana; font-weight: bold; color:white;">Tic Tac Toe Game</h1>
                     <p style="color:white;">Its a Tic Tac Toe 2 player game developed by using Python and Tkinter GUI</p>
                 </div> 
                 <img src="{% static 'image/tic.jpg' %}" width="1400px" height="500px" alt="...">
-                    <div class="containe text-center">
+                    <div class="con containe text-center">
                     <a href="https://github.com/mshukla376/tic-tac-toe-GUI-tkinter" class="btn btn-primary">Source Code</a>
                     </div>
-                    <div class="containe text-center">
-                    <a href="{% static 'Tic-Tac-Toe.exe' %}" class="btn btn-primary" style=" top: 33%">EXE File Download</a>
+                    <div class="conta contai text-center">
+                    <a href="{% static 'Tic-Tac-Toe.exe' %}" class="btn btn-primary">EXE File Download</a>
                     </div>
                 
                 
