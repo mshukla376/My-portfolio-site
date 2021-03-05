@@ -4,7 +4,7 @@
   <head>
   <link rel="icon" 
       type="image/png" 
-      href="static/image/ms.jpg">
+      href="static/image/ms3.png">
   <title>{% block title%}{% endblock title%}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -155,7 +155,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'index' %}"><img style="max-width:100%; height:auto;" src="{%static 'image/ms3.png'%}" width="25" height="20"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -165,7 +165,7 @@
               <a class="nav-link active" aria-current="page" href="{% url 'resume' %}">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active"  href="#">Blog</a>
+              <a class="nav-link active"  href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -183,10 +183,10 @@
           </ul>
             
           {% if user.is_authenticated %}
-             <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'logoutUser' %}">Logout</a>
+             <a class="nav-link active" style="color:white;" href="{% url 'logoutUser' %}">Logout</a>
           {% else %}
-            <a type="button" class="mr-2 btn btn-primary" style="color:black;" href="{% url 'loginUser' %}">Login</a>
-            <a type="button" class="btn btn-primary" style="color:black;" href="{% url 'Signup' %}">Sign Up</a>
+            <a class="nav-link active" style="color:white;" href="{% url 'loginUser' %}">Login</a>
+            <a class="nav-link active" style="color:white;" href="{% url 'Signup' %}">Register</a>
            
           {% endif %}
         </div>
@@ -200,7 +200,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col item social"><a href="https://www.facebook.com/mohit.shukla.75685"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/Mshukla_02"><i class="fa fa-twitter"></i></a><a href="https://myaccount.google.com/profile?pli=1"><i class="fa fa-google"></i></a><a href="https://www.instagram.com/mshukla.k10/"><i class="fa fa-instagram"></i></a></div>
+                    <div class="col item social"><a href="https://www.facebook.com/mohit.shukla.75685"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/Mshukla_02"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/mohit-shukla-a471421b3"><i class="fa fa-linkedin"></i></a><a href="https://www.instagram.com/mshukla.k10/"><i class="fa fa-instagram"></i></a></div>
                 </div>
                 <p class="copyright">Mshukla © 2021</p>
             </div>

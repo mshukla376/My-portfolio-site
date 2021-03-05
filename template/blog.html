@@ -1,6 +1,27 @@
 {% extends 'navbar.html' %}
 {% block title %}Blog{% endblock title %}
-{% block body %}
+{% load static %}
+{% block css %}
+<style>
+.containerss {
+    width: auto;
+    height: 650px;
+}
+@media screen and (max-width:767px){
+    .imgs{
+        width: 350px;
+        height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+}
 
+
+</style>
+{% endblock css %}
+{% block body %}
+<div class="imgs containerss" style="background: url('static/image/construction.png'); background-size: cover;">
+</div>
 
 {% endblock body %}

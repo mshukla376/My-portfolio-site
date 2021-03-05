@@ -4,7 +4,7 @@
   <head>
   <link rel="icon" 
       type="image/png" 
-      href="static/image/ms.jpg">
+      href="static/image/ms3.png">
   <title>{% block title%}{% endblock title%}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -75,7 +75,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'index' %}"><img style="max-width:100%; height:auto;" src="{%static 'image/ms3.png'%}" width="25" height="20"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -85,7 +85,7 @@
               <a class="nav-link active" aria-current="page" href="{% url 'resume' %}">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active"  href="#">Blog</a>
+              <a class="nav-link active"  href="{% url 'blog' %}">Blog</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -102,10 +102,10 @@
             </li>
           </ul>
           {% if user.is_authenticated %}
-            <a type="button" class="mr-2 btn btn-primary" style="color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'logoutUser' %}">Logout</a>
+            <a class="nav-link active" style="color:white;" href="{% url 'logoutUser' %}">Logout</a>
           {% else %}
-            <a type="button" class="mr-2 btn btn-primary" style="color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'loginUser' %}">Login</a>
-            <a type="button" class="btn btn-primary" style="color:black; color:black; border: none; padding: .375rem .75rem;; cursor: pointer; font-size: 13px; text-align: center; font-weight:normal; font-family:none;" href="{% url 'Signup' %}">Sign Up</a>
+            <a class="nav-link active" style="color:white;" href="{% url 'loginUser' %}">Login</a>
+            <a class="nav-link active" style="color:white;" href="{% url 'Signup' %}">Register</a>
           {% endif %}
         </div>
       </div>

@@ -77,7 +77,7 @@ def Feedback(request):
         fname=request.POST["fname"]
         femail=request.POST["femail"]
         fmessage=request.POST["fmessage"]
-        m = messages.info(request, "Thank you for your Feedback"+" "+fname)
+        m = messages.info(request, "Thank you for Contacting us"+" "+fname)
 
 
         send_mail(
@@ -89,5 +89,8 @@ def Feedback(request):
         return render(request, "feedback.html")
 
     return render(request, "feedback.html")
+
+def Blog(request):
+    return render(request,"blog.html")
 
 
